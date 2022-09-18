@@ -3,6 +3,6 @@ terraform {
     bucket = "lab19-tf-state-bucket"
     key = "main"
     region = "us-east-1"
-    dynamodb_table = "L19-DB-Table"
+    dynamodb_table = "Lab19-DB-Table"
   }
 }
