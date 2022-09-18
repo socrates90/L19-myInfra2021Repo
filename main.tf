@@ -10,6 +10,15 @@ resource "aws_vpc" "main" {
   }
 }
 
+resource "aws_instance" "myFirstInstance" {
+  ami           = var.ami_id
+  key_name = var.key_name
+  instance_type = var.instance_type
+  tags= {
+    Name = var.tag_name
+  }
+}
+
 #Create security group with firewall rules
 resource "aws_security_group" "my_security_group" {
   name        = var.security_group
@@ -40,15 +49,6 @@ resource "aws_security_group" "my_security_group" {
 
   tags= {
     Name = var.security_group
-  }
-}
-
-resource "aws_instance" "myFirstInstance" {
-  ami           = var.ami_id
-  key_name = var.key_name
-  instance_type = var.instance_type
-  tags= {
-    Name = var.tag_name
   }
 }
 
