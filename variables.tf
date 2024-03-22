@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "key_name" { 
     description = " SSH keys to connect to ec2 instance" 
-    default     =  "MyJenkinsKey" 
+    default     =  "devops_coach" 
 }
 
 variable "instance_type" { 
@@ -24,7 +24,7 @@ variable "tag_name" {
 } 
 variable "ami_id" { 
     description = "AMI for Ubuntu Ec2 instance" 
-    default     = "ami-0729e439b6769d6ab" 
+    default     = "ami-07d9b9ddc6cd8dd30" 
 }
 variable "versioning" {
     type        = bool
