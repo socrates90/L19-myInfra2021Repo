@@ -1,8 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "lab19-tf-state-bucket"
+    bucket = "dev-tf-state-bucket-l19"
     key = "main"
     region = "us-east-1"
-    dynamodb_table = "Lab19-DB-Table"
+    dynamodb_table = "l19-dynamodb-table"
+    encrypt = true
   }
 }
